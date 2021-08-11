@@ -16,7 +16,7 @@ function UseStateBasic() {
 
     return (
         <div>
-            <>
+            <> {/* this is how we wrap our components in JSX or we can also use <ReactFragments> for the same purpose*/ }
                 <h>{day}</h>
                 <button type="button" className="btn" onClick={handleClick}> {/*this is a button and this is how we define it in JSX on Click directs to handleClick function*/}
                     Change my Day

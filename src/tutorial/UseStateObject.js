@@ -7,7 +7,7 @@ function UseStateObject() {
      message: "I am God",
     });
     const changeMessage = () =>{
-        setPerson("Not Anymore")
+        setPerson({...person, message:"Not Anymore"})
     }
     return (
         <div>
@@ -15,12 +15,12 @@ function UseStateObject() {
             <h3>{person.name}</h3>
             <h3>{person.age}</h3>
             <h3>{person.message}</h3>
-            <button className="btn" on Click={changeMessage}>
+            <button className="btn" onClick={changeMessage}>
                 Change my message
             </button>
             </>
         </div>
     )
-}
+} // this will only change the "message" instead of all fields 
 
 export default UseStateObject
