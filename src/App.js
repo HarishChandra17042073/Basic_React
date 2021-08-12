@@ -5,7 +5,8 @@ import React from 'react'
 //import UseStateBasic from "./tutorial/UseStateBasic"
 //import UseStateArray from './tutorial/UseStateArray'
 //import UseStateObject from './tutorial/UseStateObject'
-import Forms from './tutorial/Forms'
+//import Forms from './tutorial/Forms'
+import LearnJSON from './tutorial/LearnJSON'
 
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
       {/*<UseStateArray />*/}
       {/*<UseStateErrorEx />*/}
       {/*<UseStateBasic />*/}
-      <Forms />
+      {/*<Forms /> */}
+      <LearnJSON /> 
     </div>
   )
 }

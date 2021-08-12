@@ -8,7 +8,7 @@ import React, { useState } from 'react'
 function Forms() {
     const [firstName, setFirstName] = useState(" ");
     const [email, setEmail] = useState(" ");
-    const [people, setPeople] = useState("[]");
+    const [people, setPeople] = useState([]);
 
     const handleSubmit = (e) => {
         e.preventDefault(); // this is to prevent the default nature of browser
@@ -44,17 +44,19 @@ function Forms() {
                     </div>
                     <button type="submit"> Submit</button>
                 </form>
-                { people.map((person, index) => {
-                    const { id, firstName, email } = person;
-                    return (
-                        <div className="item" key={id}>
-                            <h4>{firstName}</h4>
-                            <p>{email}</p>
-                        </div>
-                    );
-
-
-                })}
+                {
+                    people.map((person, index) => {
+                        const {id, firstName, email} = person;
+                        return (
+                            <div className="item" key={id}>
+                                <h4>{firstName}</h4>
+                                <p>{email}</p>
+                            </div>
+                        );
+    
+    
+                    })
+                }
 
             </article>
         </>
