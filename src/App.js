@@ -6,20 +6,21 @@ import React from 'react'
 //import UseStateArray from './tutorial/UseStateArray'
 //import UseStateObject from './tutorial/UseStateObject'
 //import Forms from './tutorial/Forms'
-import LearnJSON from './tutorial/LearnJSON'
-
+//import LearnJSON from './tutorial/LearnJSON'
+import Index from './tutorial/Reducer'
 
 function App() {
   return (
     <div className='container'>
-      <h2>Advance React JS</h2>
+      {/*<h2>Advance React JS</h2> */}
       {/*<UseEffectBasics /> *}
       {/*<USeStateCounter /> */}
       {/*<UseStateArray />*/}
       {/*<UseStateErrorEx />*/}
       {/*<UseStateBasic />*/}
       {/*<Forms /> */}
-      <LearnJSON /> 
+      {/* <LearnJSON /> */}
+      <Index />
     </div>
   )
 }
