@@ -7,7 +7,8 @@ import React from 'react'
 //import UseStateObject from './tutorial/UseStateObject'
 //import Forms from './tutorial/Forms'
 //import LearnJSON from './tutorial/LearnJSON'
-import Index from './tutorial/Reducer'
+//import Index from './tutorial/Reducer'
+import ReactRouterDom from './tutorial/React-Router'
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
       {/*<UseStateBasic />*/}
       {/*<Forms /> */}
       {/* <LearnJSON /> */}
-      <Index />
+      <ReactRouterDom />
     </div>
   )
 }
