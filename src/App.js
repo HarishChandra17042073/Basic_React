@@ -8,7 +8,8 @@ import React from 'react'
 //import Forms from './tutorial/Forms'
 //import LearnJSON from './tutorial/LearnJSON'
 //import Index from './tutorial/Reducer'
-import ReactRouterDom from './tutorial/React-Router'
+//import ReactRouterDom from './tutorial/React-Router'
+import PropDrilling from './tutorial/Prop-Drilling'
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
       {/*<UseStateBasic />*/}
       {/*<Forms /> */}
       {/* <LearnJSON /> */}
-      <ReactRouterDom />
+      { /*<ReactRouterDom />*/}
+      <PropDrilling />
     </div>
   )
 }
