@@ -1,41 +1,40 @@
-import React,{useState, useContext} from 'react'
-import {data} from './data'
-//REDUX is for bigger applications we can use useContext for smaller applications
-
-const PersonContext = React.createContext(); // this will return us two components Provider and Consumer
-
-
+import React, {useState,useContext} from 'react'
+import {data} from "./data"
+const PersonContext = React.createContext();
 function ContextAPI() {
-    const [people,setPeople]=useState(data);
-    const removePerson=(id)=>{
-        setPeople(people=>{
-            return people.filter((person)=>person.id!==id)
+    const [people,setPeople] = useState(data);
+    const removePerson = (id) =>{
+        setPeople((people)=>
+        {
+            return people.filter((person)=>person.id !== id)
         })
     }
     return (
         <>
-            <section>
-                <h3>Prop Drilling</h3>
-                <List mypeople={people} rp={removePerson}></List>
-
-            </section>
+       
+            <PersonContext.Provider value={{removePerson}}>
+            <h3>Context API</h3>
+            <List people={people} removePerson={removePerson}/>
+        
+        </PersonContext.Provider>
         </>
     )
 }
-const List=(props)=>{
+const List = ({people}) =>{
     return <>
-{
-    props.mypeople.map((people)=>{
-        return <SinglePerson key={people.id} per={people} remove={props.rp}/>
-    })
+    {
+        people.map((person)=>{
+            return <SinglePerson key={person.id} {...person}/>;
+          
+        })
+    }
+</>
 }
-    </>
-}
-const SinglePerson=(props)=>{
-
-return <div className='item'>
-    <h4>{props.per.name}</h4>
-    <button onClick={()=>props.remove(props.per.id)}>Remove</button>
-</div>
+const SinglePerson=({id,name})=>{
+    const {removePerson} = useContext(PersonContext)
+    return <div className="item">
+    <h4>{name}</h4>
+<button onClick={()=>removePerson(id)}>remove</button>
+    </div>
 }
 export default ContextAPI

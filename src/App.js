@@ -9,7 +9,8 @@ import React from 'react'
 //import LearnJSON from './tutorial/LearnJSON'
 //import Index from './tutorial/Reducer'
 //import ReactRouterDom from './tutorial/React-Router'
-import PropDrilling from './tutorial/Prop-Drilling'
+//import PropDrilling from './tutorial/Prop-Drilling'
+import ContextAPI from './tutorial/Context'
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
       {/*<Forms /> */}
       {/* <LearnJSON /> */}
       { /*<ReactRouterDom />*/}
-      <PropDrilling />
+      {/*<PropDrilling />*/}
+      <ContextAPI />
     </div>
   )
 }
