@@ -1,7 +1,11 @@
-import React,{useState} from 'react'
+import React,{useState, useContext} from 'react'
 import {data} from './data'
+//REDUX is for bigger applications we can use useContext for smaller applications
 
-function PropDrilling() {
+const PersonContext = React.createContext(); // this will return us two components Provider and Consumer
+
+
+function ContextAPI() {
     const [people,setPeople]=useState(data);
     const removePerson=(id)=>{
         setPeople(people=>{
@@ -34,4 +38,4 @@ return <div className='item'>
     <button onClick={()=>props.remove(props.per.id)}>Remove</button>
 </div>
 }
-export default PropDrilling
+export default ContextAPI
